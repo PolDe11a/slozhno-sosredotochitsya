@@ -3,10 +3,55 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root .theme_light {
+  --bg-color: #fff1f7;
+  --title-color: #353430;
+  --accent-text: #353430;
+  --accent-color: #ff8dcb;
+  --text-color: #353430;
+  --logo-color: #ffc2e6;
+  --hover-button-border: 1px solid rgba(50, 49, 45, 0.4);
+  --border: 1px solid #353430;
+  --a-focus-border: #353430;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #fff1f7;
+    --title-color: #353430;
+    --accent-text: #353430;
+    --accent-color: #ff8dcb;
+    --text-color: #353430;
+    --logo-color: #ffc2e6;
+    --hover-button-border: 1px solid rgba(50, 49, 45, 0.4);
+    --border: 1px solid #353430;
+    --a-focus-border: #353430;
+  }
+  .theme_auto .header-decoration {
+    display: none;
+  }
+}
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-image: url(../images/cover-image-light.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.theme_light .header-decoration {
+  display: none;
+}
+
+@media (width >= 768px) {
+  :root,
+  :root .theme_dark,
+  :root .theme_light {
+    --padding: 20px;
+  }
 }
