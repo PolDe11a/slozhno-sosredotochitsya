@@ -12,7 +12,7 @@
   --logo-color: #ffc2e6;
   --hover-button-border: 1px solid rgba(50, 49, 45, 0.4);
   --border: 1px solid #353430;
-  --a-focus-border: #353430;
+  --a-focus-border: 1px solid #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,10 +25,14 @@
     --logo-color: #ffc2e6;
     --hover-button-border: 1px solid rgba(50, 49, 45, 0.4);
     --border: 1px solid #353430;
-    --a-focus-border: #353430;
+    --a-focus-border: 1px solid #353430;
   }
   .theme_auto .header-decoration {
     display: none;
+  }
+
+  .page {
+    background-image: url(../images/cover-image-light.png);
   }
 }
 
@@ -38,10 +42,6 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   background-image: url(../images/cover-image-light.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 .theme_light .header-decoration {

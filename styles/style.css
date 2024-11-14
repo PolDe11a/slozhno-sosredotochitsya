@@ -4,7 +4,10 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--bg-color);
   background-attachment: fixed;
-  font-family: var(--main-font, sans-serif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: var(--main-font, monospace);
   font-size: var(--font-size);
   color: var(--text-color);
   display: grid;
@@ -46,7 +49,7 @@
 }
 
 .header-title {
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--shadow);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--logo-color);
   line-height: 82.5%;
@@ -122,16 +125,21 @@
 
 /*LVHA*/
 
+.header__theme-menu-button:hover {
+  border: var(--hover-button-border);
+}
+
+a:hover {
+  border-block-end: solid 1px currentColor;
+}
+
 .header__theme-menu-button_active {
   border: var(--border);
+  pointer-events: none;
 }
 
 button:disabled {
   pointer-events: none;
-}
-
-.header__theme-menu-button:hover {
-  border: var(--hover-button-border);
 }
 
 a,
@@ -139,21 +147,18 @@ a,
   outline: none;
 }
 
+a:focus-visible {
+  outline: var(--a-focus-border);
+}
+
 .header__theme-menu-button:focus-visible {
   border-block-end: var(--border);
 }
+
 a {
   text-shadow: 2px 2px 0 var(--accent-color);
   color: inherit;
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:focus-visible {
-  outline: var(--a-focus-border);
 }
 
 /*ARTICLES*/
@@ -183,6 +188,11 @@ a:focus-visible {
   flex-basis: clamp(14.75rem, -0.063rem + 30.86vw, 19.688rem);
   flex-wrap: wrap;
   flex-grow: 1;
+  justify-content: center;
+}
+
+.answer p:not(:last-of-type) {
+  margin-bottom: 10px;
 }
 
 .content-paragraph {
@@ -198,7 +208,7 @@ h4 {
   margin-top: 20px;
 }
 
-h3 {
+div h3 {
   margin-block-end: 10px;
 }
 
@@ -236,7 +246,7 @@ article:not(:last-child) {
 }
 
 .footer-title {
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--shadow);
   font-size: clamp(7.25rem, 5.769rem + 6.32vw, 9.813rem);
   color: var(--logo-color);
   line-height: 82.5%;
@@ -253,7 +263,7 @@ article:not(:last-child) {
     justify-self: center;
   }
 
-  .answer-type-2 {
+  .answer-what {
     display: grid;
     grid-template-columns: repeat(3, 315px);
     gap: 20px;
@@ -275,7 +285,8 @@ article:not(:last-child) {
     inline-size: 49.9%;
   }
 
-  .card-type-1 {
+  .card-how,
+  .card-why {
     display: flex;
   }
 
