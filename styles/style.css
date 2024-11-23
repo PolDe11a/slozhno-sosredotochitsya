@@ -94,7 +94,7 @@
   border-radius: 50%;
   aspect-ratio: 1/1;
   margin: 9px;
-  box-shadow: 0 0 2px 2px var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
 .decorated-zone::before {
@@ -188,7 +188,6 @@ a {
   flex-basis: clamp(14.75rem, -0.063rem + 30.86vw, 19.688rem);
   flex-wrap: wrap;
   flex-grow: 1;
-  justify-content: center;
 }
 
 .answer p:not(:last-of-type) {
@@ -265,7 +264,7 @@ article:not(:last-child) {
 
   .answer-what {
     display: grid;
-    grid-template-columns: repeat(3, 315px);
+    grid-template-columns: repeat(3, minmax(315px, auto));
     gap: 20px;
   }
 }
