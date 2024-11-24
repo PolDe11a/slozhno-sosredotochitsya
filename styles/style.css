@@ -188,6 +188,8 @@ a {
   flex-basis: clamp(14.75rem, -0.063rem + 30.86vw, 19.688rem);
   flex-wrap: wrap;
   flex-grow: 1;
+  display: grid;
+  gap: 20px;
 }
 
 .answer p:not(:last-of-type) {
@@ -205,11 +207,6 @@ a {
 h4 {
   font-weight: 400;
   margin-block-end: 10px;
-}
-
-.answer {
-  display: grid;
-  gap: 20px;
 }
 
 /*GALLERY*/
