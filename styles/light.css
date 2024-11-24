@@ -48,10 +48,4 @@
   display: none;
 }
 
-@media (width >= 768px) {
-  :root,
-  :root .theme_dark,
-  :root .theme_light {
-    --padding: 20px;
-  }
-}
+
