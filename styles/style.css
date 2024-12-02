@@ -192,16 +192,9 @@ a {
   gap: 20px;
 }
 
-.answer p:not(:last-of-type) {
-  margin-bottom: 10px;
-}
-
 .content-paragraph {
   line-height: 130%;
-}
-
-.main-content p {
-  margin-top: 10px;
+  margin-block-start: 10px;
 }
 
 h4 {
